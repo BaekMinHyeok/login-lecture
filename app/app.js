@@ -6,10 +6,10 @@ const app = express();
 
 
 //라우팅
-const home = require("./routes/home") // 표시된 경로의 파일을 읽기
+const home = require("./src/routes/home") // 표시된 경로의 파일을 읽기
 
 //앱 세팅
-app.set("views","./views");
+app.set("views","./src/views");
 app.set("view engine", "ejs");
 
 app.use("/", home); // use -> 미들웨어를 등록해주는 메서드
