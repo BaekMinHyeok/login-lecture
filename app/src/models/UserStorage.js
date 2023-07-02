@@ -18,6 +18,18 @@ class UserStorage {
     },{}); //{}); 초기값을 오브젝트로 지정
     return newUsers;
   }
+
+  static getUserInfo(id) {
+    const users = this.#users;
+    const idx = users.id.indexOf(id);
+    const usersKeys = Object.keys(users); // #users의 값을 여기로 받아왔고 이 users의 key값들을 리스트로 변경 [id,psword,name] 
+    const userInfo = usersKeys.reduce((newUser, info) =>{
+      newUser[info] = users[info][idx]; //idx 값들을 info에 넣어줌
+      return newUser;
+    }, {});
+
+    return userInfo;
+  }
 } // class 안에 변수 선언은 필요없다
 
 module.exports = UserStorage;
