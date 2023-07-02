@@ -20,7 +20,16 @@ function login(){
         body: JSON.stringify(req), //key 값과 value가 문자열로 나옴
     })
     .then((res) => res.json())
-    .then(console.log); //서버에서 응답하는 데이터를 받기
+    .then((res) =>{
+      if(res.success){
+        location.href = "/";
+      } else {
+        alert(res.msg);  
+      }
+    }) //서버에서 응답하는 데이터를 받기
+    .catch((err) =>{
+      console.error(new Error("로그인 중 에러 발생")); //new Error 로 사용하면 에러문구 앞에 Error로 출력
+    });
     //res.json()의 반환 값은 promise다.
     //기본 res의 반환 값은 response 스트림인데, "json()" 메서드를 통해 Response(응답) 스트림을 읽을 수 있다.
     //Response는 데이터가 모두 받아진 상태가 아니다.
