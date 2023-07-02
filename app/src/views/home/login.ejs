@@ -2,18 +2,19 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    <script src="/js/home/login.js" defer></script> <!-- 상위폴더 app.js 파일 안에 app.use(express.static(`${__dirname}/src/public`)); 연결해주는 미들웨어가 있어야 이동가능 -->
-    <!-- defer,async 를 사용해서 먼저 변수 선택자들부터 불러오게 적용 -->
+  <script src="/js/home/login.js" defer></script>
+  <!-- 상위폴더 app.js 파일 안에 app.use(express.static(`${__dirname}/src/public`)); 연결해주는 미들웨어가 있어야 이동가능 -->
+  <!-- defer,async 를 사용해서 먼저 변수 선택자들부터 불러오게 적용 -->
 </head>
 
 <body>
-    <input id="id" type="text" placeholder="아이디"> <br>
-    <input id="psword" type="text" placeholder="비밀번호"> <br>
-    <button id="loginBtn">로그인</button>
+  <input id="id" type="text" placeholder="아이디"> <br>
+  <input id="psword" type="text" placeholder="비밀번호"> <br>
+  <button id="loginBtn">로그인</button>
 </body>
 
 </html>
