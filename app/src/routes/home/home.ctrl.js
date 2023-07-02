@@ -11,6 +11,10 @@ const output = { //안에 렌더링되어진 내용을 객체로 빼줌
   login: (req, res) => {
     res.render("home/login") // 위에 views로 파일을 지정해서 경로가 views/home/login 
   },
+  register: (req, res) => {
+    res.render("home/register") // register 연결
+  },
+  
 }
 
 //users 데이터랑 프론트엔드에서 전달하는 body 데이터랑 인증하는 과정
